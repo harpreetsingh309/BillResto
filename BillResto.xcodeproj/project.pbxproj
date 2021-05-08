@@ -29,6 +29,7 @@
 		0A66E7BD263F018200182DCF /* BillingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A66E7BB263F018200182DCF /* BillingTableCell.swift */; };
 		0A66E7BE263F018200182DCF /* BillingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A66E7BC263F018200182DCF /* BillingTableCell.xib */; };
 		0A959BD826404B7900BFB863 /* BillSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A959BD726404B7900BFB863 /* BillSplitVC.swift */; };
+		F3BFED5126464F46003FE8B7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3BFED5026464F46003FE8B7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0A66E7BB263F018200182DCF /* BillingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingTableCell.swift; sourceTree = "<group>"; };
 		0A66E7BC263F018200182DCF /* BillingTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillingTableCell.xib; sourceTree = "<group>"; };
 		0A959BD726404B7900BFB863 /* BillSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitVC.swift; sourceTree = "<group>"; };
+		F3BFED5026464F46003FE8B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		0A66E75A263ED09700182DCF = {
 			isa = PBXGroup;
 			children = (
+				F3BFED5026464F46003FE8B7 /* README.md */,
 				0A66E765263ED09700182DCF /* BillResto */,
 				0A66E764263ED09700182DCF /* Products */,
 			);
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BFED5126464F46003FE8B7 /* README.md in Resources */,
 				0A66E773263ED09800182DCF /* LaunchScreen.storyboard in Resources */,
 				0A66E770263ED09800182DCF /* Assets.xcassets in Resources */,
 				0A66E76E263ED09700182DCF /* Main.storyboard in Resources */,
