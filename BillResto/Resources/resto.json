@@ -1,0 +1,144 @@
+{
+  "message": "All Good",
+  "success": 1,
+  "list": [
+      {
+          "groupName": "Group 1",
+          "noOfPerson": "3",
+          "clientName": "John",
+          "order": [
+              {
+                  "name": "Big Brekkie",
+                  "price": 16,
+                  "count": 2
+              },
+              {
+                  "name": "Bruchetta",
+                  "price": 8,
+                  "count": 3
+              },
+              {
+                  "name": "Poached Eggs",
+                  "price": 12,
+                  "count": 3
+              },
+              {
+                  "name": "Coffee",
+                  "price": 5,
+                  "count": 2
+              },
+              {
+                  "name": "Tea",
+                  "price": 3,
+                  "count": 1
+              },
+              {
+                  "name": "Soda",
+                  "price": 4,
+                  "count": 3
+              },
+              {
+                  "name": "Garden Salad",
+                  "price": 10,
+                  "count": 0
+              }
+          ],
+          "initialPay" : 0,
+          "discount" : "0",
+          "paymentType" : "cash",
+          "split": "true"
+      },
+      {
+          "groupName": "Group 2",
+          "noOfPerson": "5",
+          "clientName": "Wilson",
+          "order": [
+              {
+                  "name": "Big Brekkie",
+                  "price": 16,
+                  "count": 3
+              },
+              {
+                  "name": "Bruchetta",
+                  "price": 8,
+                  "count": 0
+              },
+              {
+                  "name": "Poached Eggs",
+                  "price": 12,
+                  "count": 1
+              },
+              {
+                  "name": "Coffee",
+                  "price": 3,
+                  "count": 3
+              },
+              {
+                  "name": "Tea",
+                  "price": 3,
+                  "count": 1
+              },
+              {
+                  "name": "Soda",
+                  "price": 4,
+                  "count": 1
+              },
+              {
+                  "name": "Garden Salad",
+                  "price": 10,
+                  "count": 1
+              }
+          ],
+          "initialPay" : 0,
+          "discount" : "10",
+          "paymentType" : "credit",
+          "split": "false"
+      },
+      {
+          "groupName": "Group 3",
+          "noOfPerson": "7",
+          "clientName": "Lisy",
+          "order": [
+              {
+                  "name": "Big Brekkie",
+                  "price": 16,
+                  "count": 5
+              },
+              {
+                  "name": "Bruchetta",
+                  "price": 8,
+                  "count": 5
+              },
+              {
+                  "name": "Poached Eggs",
+                  "price": 12,
+                  "count": 2
+              },
+              {
+                  "name": "Coffee",
+                  "price": 3,
+                  "count": 3
+              },
+              {
+                  "name": "Tea",
+                  "price": 3,
+                  "count": 2
+              },
+              {
+                  "name": "Soda",
+                  "price": 4,
+                  "count": 2
+              },
+              {
+                  "name": "Garden Salad",
+                  "price": 10,
+                  "count": 3
+              }
+          ],
+          "initialPay" : 50,
+          "discount" : "10",
+          "paymentType" : "credit",
+          "split": "true"
+      }
+  ]
+}

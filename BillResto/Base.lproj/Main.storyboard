@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eyl-tP-lCK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Group List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GroupListVC" customModule="BillResto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-mw-wEY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0Ft-H2-mfD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yBg-Fc-9NP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lyW-mw-wEY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FnS-Hb-Csn"/>
+                            <constraint firstItem="lyW-mw-wEY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IzF-5l-H7f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lyW-mw-wEY" secondAttribute="trailing" id="MYU-lv-jiy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lyW-mw-wEY" secondAttribute="bottom" id="nmn-wt-wuR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Group List" id="fcJ-tj-Dx3"/>
+                    <connections>
+                        <outlet property="billingTableView" destination="lyW-mw-wEY" id="yhL-4k-EB0"/>
+                        <segue destination="SwE-Gh-MxX" kind="show" identifier="BILL_DETAILS" id="N36-n1-F6M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="75"/>
+        </scene>
+        <!--Invoice-->
+        <scene sceneID="KI6-Zw-1PP">
+            <objects>
+                <viewController id="SwE-Gh-MxX" customClass="BillDetailsVC" customModule="BillResto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CHn-UF-v3i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-nf-SXQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SwE-Gh-MxX" id="QiH-4T-ZlO"/>
+                                    <outlet property="delegate" destination="SwE-Gh-MxX" id="SXV-9u-arG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yKE-RR-3Of"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CZv-nf-SXQ" firstAttribute="top" secondItem="yKE-RR-3Of" secondAttribute="top" id="6o8-Jd-hXE"/>
+                            <constraint firstItem="yKE-RR-3Of" firstAttribute="trailing" secondItem="CZv-nf-SXQ" secondAttribute="trailing" id="LD2-j9-GmQ"/>
+                            <constraint firstItem="yKE-RR-3Of" firstAttribute="bottom" secondItem="CZv-nf-SXQ" secondAttribute="bottom" id="YL5-hE-nqR"/>
+                            <constraint firstItem="CZv-nf-SXQ" firstAttribute="leading" secondItem="yKE-RR-3Of" secondAttribute="leading" id="yav-HC-YQF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invoice" id="qhn-9Y-8AT"/>
+                    <connections>
+                        <outlet property="billingTableView" destination="CZv-nf-SXQ" id="qQk-wP-cVZ"/>
+                        <segue destination="vDM-20-BG4" kind="show" identifier="CHANGE_TAXES" id="Ets-LM-Nhx"/>
+                        <segue destination="02X-P6-TbC" kind="show" identifier="SPLIT_BILL" id="Hib-wQ-KyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXA-g0-D8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="75"/>
+        </scene>
+        <!--Tax-->
+        <scene sceneID="60P-UK-4ha">
+            <objects>
+                <viewController id="vDM-20-BG4" customClass="TaxesViewController" customModule="BillResto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOk-EA-oee">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-VF-7cV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vDM-20-BG4" id="eRt-lC-CfV"/>
+                                    <outlet property="delegate" destination="vDM-20-BG4" id="30p-xA-ISY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wJ9-np-9zf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8fv-VF-7cV" firstAttribute="top" secondItem="wJ9-np-9zf" secondAttribute="top" id="HgD-B4-eaY"/>
+                            <constraint firstItem="wJ9-np-9zf" firstAttribute="bottom" secondItem="8fv-VF-7cV" secondAttribute="bottom" id="LlR-ET-D7X"/>
+                            <constraint firstItem="wJ9-np-9zf" firstAttribute="trailing" secondItem="8fv-VF-7cV" secondAttribute="trailing" id="SET-5l-8lK"/>
+                            <constraint firstItem="8fv-VF-7cV" firstAttribute="leading" secondItem="wJ9-np-9zf" secondAttribute="leading" id="WYQ-ua-kMR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tax" id="0af-i7-J4k"/>
+                    <connections>
+                        <outlet property="billingTableView" destination="8fv-VF-7cV" id="RLd-hk-JkR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDf-OL-ZBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="75"/>
+        </scene>
+        <!--Spiit-->
+        <scene sceneID="gZn-yP-s1L">
+            <objects>
+                <viewController id="02X-P6-TbC" customClass="BillSplitVC" customModule="BillResto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y8a-Q7-9uD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-f5-8XA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="02X-P6-TbC" id="ma6-xr-nek"/>
+                                    <outlet property="delegate" destination="02X-P6-TbC" id="7Rw-lT-KsX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VYU-Cc-uMM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nfY-f5-8XA" firstAttribute="top" secondItem="VYU-Cc-uMM" secondAttribute="top" id="HOy-CC-ZHz"/>
+                            <constraint firstItem="nfY-f5-8XA" firstAttribute="leading" secondItem="VYU-Cc-uMM" secondAttribute="leading" id="T3B-3k-pbw"/>
+                            <constraint firstItem="VYU-Cc-uMM" firstAttribute="bottom" secondItem="nfY-f5-8XA" secondAttribute="bottom" id="d73-O5-rw4"/>
+                            <constraint firstItem="VYU-Cc-uMM" firstAttribute="trailing" secondItem="nfY-f5-8XA" secondAttribute="trailing" id="ovB-pA-Fdp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Spiit" id="DSO-f3-wv8"/>
+                    <connections>
+                        <outlet property="billingTableView" destination="nfY-f5-8XA" id="EJ0-W8-0HI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gh9-VA-v8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Dz-lD-YMm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eyl-tP-lCK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Gd-D0-qNM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yby-kt-TUt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuS-qG-bZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
